@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo3</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="demo3">
+		<p v-if="seen" v-on:click="seen = false">you see me</p>
+	</div>
+<script>
+	var demo3 = new Vue({
+		el:'#demo3',
+		data:{
+			seen:true
+		}
+	})
+</script>
+</body>
+</html>

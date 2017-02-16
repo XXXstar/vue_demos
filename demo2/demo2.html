@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo2</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="demo2">
+		<span v-bind:title="message">title</span>
+	</div>
+<script>
+	var demo2 = new Vue({
+		el:'#demo2',
+		data:{
+			message : 'you load this page on'+new Date()
+		}
+	})
+</script>
+</body>
+</html>
