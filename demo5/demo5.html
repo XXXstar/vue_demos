@@ -7,10 +7,26 @@
 </head>
 <body>
 	<div id="demo5">
-		
+		<p>i = {{i}}</p>	
+		<button v-on:click="addFun"> + </button>
+		<button v-on:click="subFun"> - </button>
 	</div>
 <script>
-	
+	var demo5 = new Vue({
+		el:'#demo5',
+		data:{
+			i:0
+		},
+		methods:{
+			addFun:function(){
+				this.i++;
+			},
+			subFun:function(){
+				this.i--;
+			}
+		}
+
+	})
 </script>
 </body>
 </html>
