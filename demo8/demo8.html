@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo8</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	<div id='app-nav'>
+		<ul>
+			<nav-item v-for="item in items" :item="item"></nav-item>
+		</ul>
+	</div>
+
+<script>
+
+	Vue.component('nav-item',{
+		props:['item'],
+		template:'<li><a :href="item.url"><i></i>{{item.text}}</a></li>'
+	})
+	var appNav=new Vue({
+		el:'#app-nav',
+		data:{
+			items:[
+				{text:'首页',url:'/index.html',img:''},
+				{text:'下载',url:'/page/download.html',img:''},
+				{text:'相册',url:'/page/album.html',img:''},
+				{text:'留言',url:'/page/message.html',img:''}
+			]
+		},
+		methods:{}
+	})
+</script>
+</body>
+</html>
