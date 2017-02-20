@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo7</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="demo7">
+		<ol>
+			<todo-item v-for="student in students" v-bind:todo="student"></todo-item>	
+		</ol>
+	</div>
+
+<script>
+	Vue.component('todo-item',{
+		props:['todo'],
+		template:'<li>{{ todo.name }}</li>'
+	})
+	var demo7=new Vue({
+		el:'#demo7',
+		data:{
+			students:[
+				{name:'Lilei'},
+				{name:'Hanmeimei'},
+				{name:'Jim'}
+			]
+		}
+	}) 
+</script>	
+</body>
+</html>
